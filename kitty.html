@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Girlll!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #ff3399;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      margin-top: 50px;
+      text-shadow: 2px 2px #fff0f5;
+      animation: pop 1.5s ease infinite alternate;
+    }
+
+    p {
+      font-size: 1.6em;
+      margin: 20px;
+      animation: floatText 2s ease-in-out infinite alternate;
+    }
+
+    .kitty {
+      width: 250px;
+      margin: 20px auto;
+      display: block;
+      animation: bounce 2s infinite;
+    }
+
+    .sparkle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ffccff;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: sparkleMove 3s infinite;
+    }
+
+    @keyframes sparkleMove {
+      0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(-100px) translateX(50px);
+        opacity: 0.5;
+      }
+      100% {
+        transform: translateY(-200px) translateX(-50px);
+        opacity: 0;
+      }
+    }
+
+    @keyframes pop {
+      0% { transform: scale(1);}
+      100% { transform: scale(1.05);}
+    }
+
+    @keyframes floatText {
+      0% { transform: translateY(0);}
+      100% { transform: translateY(-10px);}
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0);}
+      50% { transform: translateY(-20px);}
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 1.1em;
+      color: #cc6699;
+      animation: floatText 2s ease-in-out infinite alternate;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎀 HAPPY BIRTHDAY 🎀</h1>
+  <img src="kitty.png" alt="Hello Kitty" class="kitty">
+  
+  <p>I LOVE YOU SO MUCH GIRLL 💖💖 MUAH MUAH 😘</p>
+  <p>HAVE THE BEST DAY EVER 🎉 AND ENJOY YOUR LIFE 🌸</p>
+
+  <div class="footer">✨ You’re precious ✨</div>
+
+  <script>
+    // add sparkles to the page
+    for (let i = 0; i < 30; i++) {
+      let sparkle = document.createElement('div');
+      sparkle.className = 'sparkle';
+      sparkle.style.top = Math.random() * window.innerHeight + 'px';
+      sparkle.style.left = Math.random() * window.innerWidth + 'px';
+      sparkle.style.background = ['#ff99cc', '#ffccff', '#ffe6f0'][Math.floor(Math.random()*3)];
+      document.body.appendChild(sparkle);
+    }
+  </script>
+
+</body>
+</html>
